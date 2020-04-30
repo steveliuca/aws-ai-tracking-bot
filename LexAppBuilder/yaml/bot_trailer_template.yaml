@@ -7,7 +7,7 @@
         S3Key: !Ref CustomResourceCodeObject
       Handler: slottypehandler.handler
       Role: !GetAtt LexLambdaRole.Arn
-      Runtime: nodejs12.0
+      Runtime: nodejs12.x
       Timeout: 300
 
   LexIntentLambda:
@@ -19,7 +19,7 @@
         S3Key: !Ref CustomResourceCodeObject
       Handler: intenthandler.handler
       Role: !GetAtt LexLambdaRole.Arn
-      Runtime: nodejs12.0
+      Runtime: nodejs12.x
       Timeout: 300
 
   LexBotLambda:
@@ -31,7 +31,7 @@
         S3Key: !Ref CustomResourceCodeObject
       Handler: bothandler.handler
       Role: !GetAtt LexLambdaRole.Arn
-      Runtime: nodejs12.0
+      Runtime: nodejs12.x
       Timeout: 300
 
   LexLambdaRole:
